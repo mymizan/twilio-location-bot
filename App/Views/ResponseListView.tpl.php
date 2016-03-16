@@ -36,7 +36,7 @@
 			<tr>
 				<th id="header_Id">Id<% if (page.orderBy == 'Id') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
 				<th id="header_From">From<% if (page.orderBy == 'From') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
-				<th id="header_Responsetext">Responsetext<% if (page.orderBy == 'Responsetext') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
+				<th id="header_Responsetext">Response Text<% if (page.orderBy == 'Responsetext') { %> <i class='icon-arrow-<%= page.orderDesc ? 'up' : 'down' %>' /><% } %></th>
 			</tr>
 		</thead>
 		<tbody>

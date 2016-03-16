@@ -73,6 +73,11 @@ GlobalConfig::$ROUTE_MAP = array(
 
 	// default controller when no route specified
 	'GET:' => array('route' => 'Number.ListView'),
+
+	// Log
+	'GET:broadcast'  => array('route' => 'Broadcast.ListView'),
+	'GET:maps'       => array('route' => 'Broadcast.MapView'),
+	'POST:broadcast' => array('route' => 'Broadcast.Send'),
 		
 	// Log
 	'GET:logs' => array('route' => 'Log.ListView'),

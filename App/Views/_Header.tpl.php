@@ -62,6 +62,7 @@
 						<a class="brand" href="./">Location Bot</a>
 						<div class="nav-collapse collapse">
 							<ul class="nav">
+								<li <?php if ($this->nav=='broadcast') { echo 'class="active"'; } ?>><a href="./broadcast">Broadcast</a></li>
 								<li <?php if ($this->nav=='numbers') { echo 'class="active"'; } ?>><a href="./numbers">Numbers</a></li>
 								<li <?php if ($this->nav=='responses') { echo 'class="active"'; } ?>><a href="./responses">Response</a></li>
 								<li <?php if ($this->nav=='logs') { echo 'class="active"'; } ?>><a href="./logs">Logs</a></li>

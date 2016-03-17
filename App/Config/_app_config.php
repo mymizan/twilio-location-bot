@@ -76,7 +76,7 @@ GlobalConfig::$ROUTE_MAP = array(
 
 	// Log
 	'GET:broadcast'  => array('route' => 'Broadcast.ListView'),
-	'GET:maps'       => array('route' => 'Broadcast.MapView'),
+	'GET:maps'       => array('route' => 'Map.ListView'),
 	'POST:broadcast' => array('route' => 'Broadcast.Send'),
 		
 	// Log

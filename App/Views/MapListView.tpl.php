@@ -19,34 +19,22 @@
 </script>
 <div id='googleMaps'>
 </div>
-<div class="container">
-<div class='row'>
-	<div class='span6'>
-		<form id='broadcast'>
-		  <fieldset>
-		    <legend>Send Broadcast</legend>
-		    <label>Add a Text Message with Location Information</label>
-		    <textarea rows="5" style='width:96%;'></textarea>
-		    <br />
-		    <button type="button" class="btn btn-primary get-location">Get Location</button>
-		    <button type="button" class="btn btn-warning send-location" style='display: none;'>Send</button>
-		  </fieldset>
-		  <div class="progress progress-striped active" style='display: none;width:200px;'>
-			  <div class="bar" style="width: 10%;"></div> 
-		</div>
-		</form> 
-	</div>
-</div>
-</div> <!-- /container -->
-
 <script>
       var map;
       function initMap() {
         map = new google.maps.Map(document.getElementById('googleMaps'), {
           //center: {lat: 22.3475365, lng: 91.8123324},
-          center: {lat: 60, lng: 105},
+          center: {lat: <?php echo $_POST['lat']; ?>, lng: <?php echo $_POST['lng']; ?>},
           zoom: 3
         });
+
+        var marker = new google.maps.Marker({
+		    position: {lat: <?php echo $_POST['lat']; ?>, lng: <?php echo $_POST['lng']; ?>},
+		    animation: google.maps.Animation.DROP,
+		    draggable: false,
+		    map: map,
+		    title: "User's Current Locatin"
+		});
       }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCgWjrdDzTDaEtmqS_3QjECTARAFKv3zSY&callback=initMap"

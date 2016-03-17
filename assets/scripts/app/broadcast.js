@@ -49,9 +49,9 @@ var page = {
 		    animation: google.maps.Animation.DROP,
 		    draggable: true,
 		    map: map,
-		    title: 'Your Location. Drag to set new location.'
+		    title: 'Your Location. Drag and click to set new location.'
 		});
-		marker.addListener('drag', page.userChangeLocation);
+		marker.addListener('click', page.userChangeLocation);
 	    $('#broadcast textarea').val('Map:' + window.location.href.replace('broadcast','maps') + '?l=' + latlon);
 	    $('#broadcast .send-location').show();
 

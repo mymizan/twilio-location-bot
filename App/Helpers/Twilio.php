@@ -7,16 +7,19 @@ class Twilio
 {
 	public static function sendSms($number, $text)
 	{
-		$client = new Services_Twilio(GlobalConfig::TWILIO_SID, GlobalConfig::TWILIO_TOKEN);
+		return true; //disable sms sending
+		/**
+		$client = new Services_Twilio(GlobalConfig::$TWILIO_SID, GlobalConfig::$TWILIO_TOKEN);
 		$message = $client->account->messages->sendMessage(
 		    GlobalConfig::TWILIO_FROM, // From a Twilio number in your account
 		   $number,
 		   $text
 		);
-		return true;
+		return $message;
+		**/
 	}
 
-	pubic static function formatNumber($number)
+	public static function formatNumber($number)
 	{
 		//TODO:: sanitize and format number
 		return $number;

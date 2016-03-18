@@ -17,9 +17,9 @@ require_once("verysimple/HTTP/RequestUtil.php");
 /** database connection settings */
 GlobalConfig::$CONNECTION_SETTING = new ConnectionSetting();
 GlobalConfig::$CONNECTION_SETTING->ConnectionString = ":3306";
-GlobalConfig::$CONNECTION_SETTING->DBName = "twilio_bot";
-GlobalConfig::$CONNECTION_SETTING->Username = "root";
-GlobalConfig::$CONNECTION_SETTING->Password = "abcabc";
+GlobalConfig::$CONNECTION_SETTING->DBName = "";
+GlobalConfig::$CONNECTION_SETTING->Username = "";
+GlobalConfig::$CONNECTION_SETTING->Password = "";
 GlobalConfig::$CONNECTION_SETTING->Type = "MySQL";
 GlobalConfig::$CONNECTION_SETTING->Charset = "utf8";
 GlobalConfig::$CONNECTION_SETTING->Multibyte = true;

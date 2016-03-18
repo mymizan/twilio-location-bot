@@ -4,7 +4,13 @@
 
 	$this->display('_Header.tpl.php');
 ?>
-
+<style>
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+</style>
 <script type="text/javascript">
 	$LAB.script("assets/scripts/app/broadcast.js").wait(function(){
 		$(document).ready(function(){
@@ -25,7 +31,7 @@
         map = new google.maps.Map(document.getElementById('googleMaps'), {
           //center: {lat: 22.3475365, lng: 91.8123324},
           center: {lat: <?php echo $_POST['lat']; ?>, lng: <?php echo $_POST['lng']; ?>},
-          zoom: 3
+          zoom: 16
         });
 
         var marker = new google.maps.Marker({

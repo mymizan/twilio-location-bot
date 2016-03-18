@@ -4,7 +4,13 @@
 
 	$this->display('_Header.tpl.php');
 ?>
-
+<style>
+html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+}
+</style>
 <script type="text/javascript">
 	$LAB.script("assets/scripts/app/broadcast.js").wait(function(){
 		$(document).ready(function(){

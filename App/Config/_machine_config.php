@@ -25,6 +25,13 @@ GlobalConfig::$CONNECTION_SETTING->Charset = "utf8";
 GlobalConfig::$CONNECTION_SETTING->Multibyte = true;
 // GlobalConfig::$CONNECTION_SETTING->BootstrapSQL = "SET SQL_BIG_SELECTS=1";
 
+/**
+ *  TWILIO SETTINGS
+ */
+GlobalConfig::TWILIO_SID = '';
+GlobalConfig::TWILIO_TOKEN = '';
+GlobalConfig::TWILIO_FROM = ''; //any valid number in your twilio account
+
 /** the root url of the application with trailing slash, for example http://localhost/location bot/ */
 GlobalConfig::$ROOT_URL = RequestUtil::GetServerRootUrl() . 'twilio-location-bot/';
 

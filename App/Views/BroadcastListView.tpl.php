@@ -1,6 +1,6 @@
 <?php
 	$this->assign('title','Location Bot | Broadcast');
-	$this->assign('nav','logs');
+	$this->assign('nav','broadcast');
 
 	$this->display('_Header.tpl.php');
 ?>

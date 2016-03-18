@@ -64,6 +64,15 @@ class GlobalConfig
 	/** @var int if level 2 cache is specified, the timeout in seconds*/
 	public static $LEVEL_2_CACHE_TIMEOUT = 15;
 
+	/** @var string twilio sid*/
+	public static TWILIO_SID = '';
+
+	/** @var string twilio auth token*/
+	public static TWILIO_TOKEN = '';
+
+	/** @var string twilio from phone number*/
+	public static TWILIO_FROM = '';
+
 	private static $INSTANCE;
 	private static $IS_INITIALIZED = false;
 

@@ -5,6 +5,7 @@
 require_once("AppBaseController.php");
 require_once("Model/Number.php");
 require_once("Helpers/Twilio.php");
+require_once("Model/Log.php");
 
 /**
  * LogController is the controller class for the Log object.  The
@@ -52,14 +53,21 @@ class BroadcastController extends AppBaseController
         {
 
             $criteria = new NumberCriteria();
-            $criteria->SetOrder('ASC','');
             $numbers = $this->Phreezer->Query('Number',$criteria);
-            $numbers_array =  $numbers->ToObjectArray(true);
-            if (count($numbers_array)){
-                foreach ($numbers_array as $number) {
-                    print_r($number);
-                }
+            $numbers_array =  $numbers->ToObjectArray(true, array('camelCase'=>true));
+            $msg = strip_tags($_POST['msg']);
+            
+            foreach ($numbers_array as $number) {
+                Twilio::sendSms($number->number, $msg);
+
+                //save to logs
+                $log = new Log($this->Phreezer);
+                $log->EventName = 'SMS';
+                $log->EventDescription = 'Broadcast sent to ' . Twilio::formatNumber($number->number);
+                $log->EventDate = date('Y-m-d H:i:s', time());
+                $log->Save();
             }
+            
             echo "1";
 
         }

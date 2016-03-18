@@ -250,6 +250,18 @@ class ResponseController extends AppBaseController
 			$this->RenderExceptionJSON($ex);
 		}
 	}
+
+	/**
+	 * Add response to database
+	 */
+	public function twilioCallback()
+	{
+		
+		$response = new Response($this->Phreezer);
+		$response->From = $this->SafeGetVal($json, 'From');
+		$response->Responsetext = $this->SafeGetVal($json, 'Body');
+		$response->Save();
+	}
 }
 
 ?>

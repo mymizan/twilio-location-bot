@@ -105,6 +105,7 @@ GlobalConfig::$ROUTE_MAP = array(
 	'GET:api/response/(:num)' => array('route' => 'Response.Read', 'params' => array('id' => 2)),
 	'PUT:api/response/(:num)' => array('route' => 'Response.Update', 'params' => array('id' => 2)),
 	'DELETE:api/response/(:num)' => array('route' => 'Response.Delete', 'params' => array('id' => 2)),
+	'POST:twilioCallback' => array('route' => 'Response.twilioCallback'),
 
 	// catch any broken API urls
 	'GET:api/(:any)' => array('route' => 'Default.ErrorApi404'),
